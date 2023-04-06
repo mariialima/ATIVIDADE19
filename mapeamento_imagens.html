@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mapeamento imagens</title>
+    <style>
+        body {
+            margin: 0px;
+            flex-direction: column;
+            display: flex;
+            justify-content: space-around;
+            justify-items: center;
+            align-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .boneco {
+            position: absolute;
+            top: 450px;
+            left: 600px;
+        }
+
+        .texto_RS{
+           display: none;
+           width: 300px;
+           height: 180px;
+           font-size: 18px;
+           text-align: justify;
+           position: absolute; 
+           top: 50px; 
+           left: 20px;
+           background-color: rgb(228, 112, 35);
+           box-shadow: 1px 1px black;
+           padding: 10px;
+        }
+
+        .texto_SC{
+           display: none;
+           width: 300px;
+           height: 210px;
+           font-size: 18px;
+           text-align: justify;
+           position: absolute; 
+           top: 50px; 
+           left: 20px;
+           background-color: rgb(165, 8, 121);
+           box-shadow: 1px 1px black;
+           padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <map name="meu_mapa">
+        <area onmouseleave="Esconder();" onmouseover="MostraTexto('RS');">
+        <area onmouseleave="Esconder();" onmouseover="MostraTexto('SC');">
+
+        <area onmouseleave="Esconder();" onmouseover="MostraTexto('RS');"shape="circle" coords="260,440,20" href="https://pt.wikipedia.org/wiki/Rio_Grande_do_Sul" target="_blank">
+        <area shape="circle" coords=" 280,376,20" href="https://pt.wikipedia.org/wiki/Paran%C3%A1" target="_blank">
+        <area onmouseleave="Esconder();" onmouseover="MostraTexto('SC');" shape="circle" coords="297,413,20" href="https://pt.wikipedia.org/wiki/Santa_Catarina" target="_blank">
+        <area shape="circle" coords="313,349,20" href="https://pt.wikipedia.org/wiki/S%C3%A3o_Paulo" target="_blank">
+        <area shape="circle" coords="382,353,20" href="https://pt.wikipedia.org/wiki/Rio_de_Janeiro" target="_blank">
+        <area shape="circle" coords="364,311,20" href="https://pt.wikipedia.org/wiki/Minas_Gerais" target="_blank">
+        <area shape="circle" coords="409,320,20" href="https://pt.wikipedia.org/wiki/Esp%C3%ADrito_Santo_(estado)" target="_blank">
+        <area shape="circle" coords="297, 276,20" href="https://pt.wikipedia.org/wiki/Goi%C3%A1s" target=" _blank">
+        <area shape="circle" coords="325,268,20" href="https://pt.wikipedia.org/wiki/Distrito_Federal_(Brasil)" target="_blank">
+        <area shape="circle" coords="396,225,20" href="https://pt.wikipedia.org/wiki/Bahia" target=" _blank">
+        <area shape="circle" coords="455,209,20" href="https://pt.wikipedia.org/wiki/Sergipe" target=" _blank">
+        <area shape="circle" coords="465,198,20" href="https://pt.wikipedia.org/wiki/Alagoas" target=" _blank">
+        <area shape="circle" coords="240,324,20" href="http://www.ms.gov.br/" target="_blank">
+        <area shape="circle" coords="226, 232,20" href="https://portal.mt.gov.br/app/catalog" target="_blank">
+        <area shape="circle" coords="139, 205,20" href="https://rondonia.ro.gov.br/portal/" target="_blank">
+        <area shape="circle" coords="43, 188,20" href="http://acre.gov.br/" target="_blank">
+        <area shape="circle" coords="123, 115,20" href="https://www.amazonas.am.gov.br/" target="_blank">
+        <area shape="circle" coords="162, 47,20" href="https://portal.rr.gov.br/" target="_blank">
+        <area shape="circle" coords="262, 134,20" href="https://www.pa.gov.br/" target="_blank">
+        <area shape="circle" coords="366, 135,20" href="https://www.ma.gov.br/" target="_blank">
+        <area shape="circle" coords="319, 196,20" href="https://www.to.gov.br/" target="_blank">
+        <area shape="circle" coords="389, 170,20" href="https://www.pi.gov.br/" target="_blank">
+        <area shape="circle" coords="435, 134,20" href="https://www.ceara.gov.br/" target="_blank">
+        <area shape="circle" coords="466, 150,20" href="http://www.rn.gov.br/" target="_blank">
+        <area shape="circle" coords="480, 167,20" href="https://paraiba.pb.gov.br/" target="_blank">
+        <area shape="circle" coords="451, 183,20" href="https://www.pe.gov.br/" target="_blank">
+        <area shape="circle" coords="278, 50, 20" href="https://pt.wikipedia.org/wiki/Amap%C3%A1" target="_blank">
+
+    </map>
+
+    <img id="BRASIL" src="mapa_brasil.jpg" usemap="#meu_mapa">
+    <img class="boneco" id="boneco" src="boneco.gif" width="80px">
+
+    <div class="texto_RS" id="texto_RS">
+        Rio Grande do Sul é o estado mais a sul do Brasil e 
+        faz fronteira com a Argentina e o Uruguai. 
+        A nordeste, a montanhosa Serra Gaúcha alberga a 
+        região vinícola do Vale dos Vinhedos e inclui 
+        cidades turísticas de estilo alemão como 
+        Gramado e Canela, famosas pelas paisagens 
+        naturais pitorescas. 
+
+    </div>
+
+    <div class="texto_SC" id="texto_SC">
+        Santa Catarina é um estado na região sul do Brasil. 
+        Com uma longa costa com o Atlântico e muitas ilhas, 
+        ela é conhecida por suas praias e montanhas. 
+        Florianópolis, a capital, tem um mercado público 
+        tradicional com bares, restaurantes e barracas de 
+        comida, além de um museu histórico instalado em um 
+        palácio do governo colonial do século 19. 
+
+    </div>
+
+</body>
+<script>
+
+    function Esconder()
+    {
+        texto_RS.style.display = "none";
+        texto_SC.style.display = "none";
+    }
+
+    function MostraTexto(estado)
+    {
+        if (estado == "RS")
+        {
+            texto_RS.style.display = "block";
+        }
+
+        if (estado == "SC")
+        {
+            texto_SC.style.display = "block";
+        }
+
+    }
+
+</script>
+
+</html>
